@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Starlight!</title>
+    <style>
+        body {
+            background-color: #1e1e2e;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hidden-container {
+            display: none;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #6a4c93, #2b8a3e);
+            border: 3px solid #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            animation: glow 3s infinite alternate;
+            max-width: 90%;
+            width: 350px;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.3); }
+            100% { box-shadow: 0 0 50px rgba(255, 255, 255, 0.7); }
+        }
+
+        .title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffe57f;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .message {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            line-height: 1.5;
+            color: #ffecb3;
+        }
+
+        .aesthetic {
+            font-size: 1rem;
+            color: #ffd54f;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .symbol {
+            font-size: 1.6rem;
+            animation: rotate 6s infinite linear;
+            margin-top: 20px;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .sparkles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .sparkles div {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: radial-gradient(circle, #fff, transparent);
+            border-radius: 50%;
+            animation: sparkle 3s infinite ease-in-out;
+        }
+
+        @keyframes sparkle {
+            0% {
+                transform: translateY(0) scale(0.5);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(50px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Sparkles placement */
+        .sparkles div:nth-child(1) { left: 5%; top: 15%; animation-duration: 3s; }
+        .sparkles div:nth-child(2) { left: 15%; top: 30%; animation-duration: 2.7s; }
+        .sparkles div:nth-child(3) { left: 25%; top: 50%; animation-duration: 2.5s; }
+        .sparkles div:nth-child(4) { left: 35%; top: 20%; animation-duration: 3s; }
+        .sparkles div:nth-child(5) { left: 45%; top: 10%; animation-duration: 2.8s; }
+        .sparkles div:nth-child(6) { left: 55%; top: 25%; animation-duration: 2.4s; }
+        .sparkles div:nth-child(7) { left: 65%; top: 45%; animation-duration: 3.2s; }
+        .sparkles div:nth-child(8) { left: 75%; top: 60%; animation-duration: 3.1s; }
+        .sparkles div:nth-child(9) { left: 85%; top: 35%; animation-duration: 3.3s; }
+        .sparkles div:nth-child(10) { left: 95%; top: 50%; animation-duration: 2.6s; }
+        .sparkles div:nth-child(11) { left: 20%; top: 80%; animation-duration: 3.4s; }
+        .sparkles div:nth-child(12) { left: 60%; top: 70%; animation-duration: 3.6s; }
+        .sparkles div:nth-child(13) { left: 80%; top: 90%; animation-duration: 2.9s; }
+        .sparkles div:nth-child(14) { left: 90%; top: 40%; animation-duration: 3.5s; }
+        .sparkles div:nth-child(15) { left: 50%; top: 80%; animation-duration: 2.7s; }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #888888;
+            text-align: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #2b8a3e;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #6a4c93;
+        }
+
+        .image-decoration {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome-screen">
+        <button class="button" onclick="showMainContent()">Click here</button>
+    </div>
+
+    <div id="main-content" class="hidden-container">
+        <img src="Layla.jpeg" alt="Decoration 1" class="image-decoration">
+        <div class="container">
+            <div class="title">🌟 Happy Birthday, Starlight! 🌟</div>
+            <div class="message">
+                Your light has always guided and inspired us. <br>
+                On your special day, may you shine brighter than ever. <br>
+                Wishing you joy, love, and endless success!
+            </div>
+            <div class="aesthetic">
+                ⤹ ⪩⊹◖︰SPECIAL DAY . 𐔌🎉 ⏝ ͝ ◍⋆
+            </div>
+            <div class="symbol">✧ ✿ ⟡ ✸ ⪩ ⪨ ✶</div>
+        </div>
+        <img src="Lumine.jpeg" alt="Decoration 2" class="image-decoration">
+        <div class="sparkles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="footer">By ArifuWorufu</div>
+    </div>
+
+    <script>
+        function showMainContent() {
+            document.getElementById('welcome-screen').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
